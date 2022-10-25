@@ -1,0 +1,26 @@
+note over browser:
+HTML Page was loaded
+All data was loaded
+end note
+
+note over browser:
+User write test to input text field
+User press button 'Save'
+end note
+
+note over browser:
+List of nodes was rebuilded
+New node was added to end of list
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: HTTP Code
+
+note over browser:
+Http Code was 201
+It means NOT REDIRECTING
+end note
+
+note over browser:
+Console.Log: {"message":"note created"}
+end note
